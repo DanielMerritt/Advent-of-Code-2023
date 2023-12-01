@@ -29,9 +29,9 @@ def part2(parsed_input: list[str]) -> int:
         "eight": "8",
         "nine": "9",
     }
+    digits = list(string.digits) + [digit for digit in digit_map]
     for text in parsed_input:
         first_digit, last_digit = None, None
-        digits = list(string.digits) + [digit for digit in digit_map]
         for i in range(len(text)):
             for digit in digits:
                 if digit in text[: i + 1]:
